@@ -1,15 +1,19 @@
 import React from 'react'
 import { AppBar, Toolbar, IconButton, Badge, MenuItem, Menu, Typography } from '@material-ui/core';
 import { ShoppingCart } from '@material-ui/icons';
-import { classExpression } from '@babel/types';
+
+import logo from '../../assets/commerce.png'
+import useStyles from './styles';
 
 const Navbar = () => {
+  const classes = useStyles();
+
   return (
     <>
         <AppBar position="fixed" className={classes.appBar} color="inherit">
             <Toolbar variant="h6" className={classes.title} color="inherit">
                 <Typography>
-                    <img src={} alt="Commerce.js" height="25px" className={classes.image} />
+                    <img src={logo} alt="Commerce.js" height="25px" className={classes.image} />
                     Commerce.js
                 </Typography>
                 <div className={classes.grow} />
