@@ -9,7 +9,7 @@ const products = [
     { id: 2, name: 'Macbook', description: 'Apple macbook.', price: '$10', image: 'https://webobjects2.cdw.com/is/image/CDW/6318929?$product-main$' },
 ]
 
-const Products = () => {
+const Products = ({ products }) => {
     const classes = useStyles();
 
     return (
