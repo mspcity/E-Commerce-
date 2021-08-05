@@ -22,6 +22,12 @@ const App = () => {
       setCart(cart)
   }
 
+  const handleAddToCart = async (productId, quantity) => {
+      const item = await commerce.cart.add(productId, quantity);
+
+      setCart(item.cart);
+  }
+
   useEffect(() => {
       fetchProducts();
       fetchCart();
@@ -32,7 +38,7 @@ const App = () => {
   return (
     <div>
         <Navbar />
-        <Products products={products} />
+        <Products products={products} onAddToCart={handleAddToCart} />
     </div>
   )
 }
