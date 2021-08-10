@@ -20,7 +20,7 @@ const Cart = () => {
       <Container>
           <div className={classes.tooblar} />
           <Typography className={classes.title} variant="h3">Your Shopping Car</Typography>
-          { ifEmpty ? <EmptyCart /> : <FilledCart />}
+          { isEmpty ? <EmptyCart /> : <FilledCart />}
       </Container>
   )
 }
