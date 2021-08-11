@@ -1,8 +1,8 @@
 import React from 'react'
 import { Container, Typography, Button, Grid } from '@material-ui/core'
 
-const Cart = () => {
-  const isEmpty = true;
+const Cart = ({ cart }) => {
+  const isEmpty = !cart.line_item.length;
 
   const EmptyCart = () => (
       <Typography variant="subtitle1">You have no items in your shopping cart, start adding some!</Typography>
@@ -11,7 +11,11 @@ const Cart = () => {
   const FilledCart = () => (
       <>
       <Grid container spacing={3}>
-          
+          {cart.line_items.map(() =>(
+              <Grid item xs={12} sm={4} key={item.id}>
+                  <div>{item.name}</div>
+              </Grid> 
+          ))}
       </Grid>
       </>
   );
