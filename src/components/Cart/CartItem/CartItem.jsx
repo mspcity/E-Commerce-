@@ -3,12 +3,12 @@ import { Typography, Button, Card, CardActions, CardContent, CardMedia } from '@
 
 import useStyles from './styles';
 
-const CartItem = () => {
+const CartItem = ({ item }) => {
   const classes = useStyles();
   
   return (
     <Card>
-        <CardMedia image={item.media.source} />
+        <CardMedia image={item.media.source} alt={item.name} className={classes.media} />
     </Card>
   )
 }
