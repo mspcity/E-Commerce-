@@ -9,6 +9,16 @@ const CartItem = ({ item }) => {
   return (
     <Card>
         <CardMedia image={item.media.source} alt={item.name} className={classes.media} />
+        <CardContent className={classes.cardContent} >
+            <Typography variant="h4">{item.name}</Typography>
+            <Typography variant="h5">{item.line_total.fommated_with_symbol}</Typography>
+        </CardContent>
+        <CardActions className={classes.CardActions}>
+            <div className={classes.buttons}>
+            </div>
+                <Button type="button" size="small">-</Button>
+                <Button type="button" size="small">+</Button>
+        </CardActions>
     </Card>
   )
 }
