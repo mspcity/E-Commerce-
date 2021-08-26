@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { commerce } from './lib/commerce';
 
 // import Products from './components/Products/Products';
-// import Navbar from './components/Navbar/Navbar';
-
+// import Navbar from './components/Navbar/Navbar'; 
+// these two imports same as below
 import { Products, Navbar, Cart } from './components';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 const App = () => {
   const [products, setProducts] = useState([]);
