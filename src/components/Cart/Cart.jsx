@@ -6,7 +6,7 @@ import useStyles from './styles';
 import CartItem from './CartItem/CartItem';
 import { classDeclaration } from '@babel/types';
 
-const Cart = ({ cart }) => {
+const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart }) => {
   const classes = useStyles();
 
   const EmptyCart = () => (
