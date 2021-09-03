@@ -6,7 +6,6 @@ import { commerce } from './lib/commerce';
 // these two imports same as below
 import { Products, Navbar, Cart, Checkout } from './components';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { Checkout } from '@chec/commerce.js/features/checkout';
 
 const App = () => {
   const [products, setProducts] = useState([]);
